@@ -1,0 +1,39 @@
+needed:
+
+print options 1-3. choice cannot equal anything other than 1,2,3. 
+1)add player
+2)view players
+3)exit program
+
+must save entries into a roster. Only 11 positions allowed.
+
+Plan:
+
+Print:
+Welcome to our CSCI 240 Roster Editor!
+1) Add New Player
+2) View Player(s)
+3) Exit Program
+Please enter your selection: 
+
+For 1: 
+Ask user to enter First Name: Save that entry
+Ask user to enter Last Name: Save that entry
+Ask user to enter Jersey Number: Save that entry
+
+Save these entries to the first position in the 3 corresponding arrays(or strings w/e)
+
+ask the user what they want to do next. 
+
+If they want to enter another player, repeat the last steps for 1.
+
+check the array of jersey numbers, if the number is already in use, tell the user they must pick another jersey number. I will assume people can have the same name so that's fine. 
+
+save this to the second place in the array or whichever place isn't filled yet. 
+
+If all 11 player spots have been filled, tell the user that the roster is full. 
+
+if the user chose options 2, to print the players, print first name, last name, jersey number, all on the same line. Each one will print the matching space in each array that is holding the specific players first name, last name and jersey number. If the roster isn't full, it won't print the empty spaces in the roster. 
+if the user chose option 3, the program will exit. 
+
+
