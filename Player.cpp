@@ -24,7 +24,7 @@ Player::~Player(){
 
 }
 
-
+// saves new players into the roster
 void Player::enterPlayer(){
 
 	std::cout << "Please enter a first name: ";
@@ -35,9 +35,9 @@ void Player::enterPlayer(){
 	std::cin >> this->jerseyNumber;
 }
 
+// prints players
 void Player::printPlayers(){
 	
-	//std::cout << "***IUPUI Football Roster***" << std::endl;
 	std::cout << jerseyNumber << ") " << firstName << " " << lastName << std::endl;
 }
 

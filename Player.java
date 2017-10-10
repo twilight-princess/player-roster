@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Player
 {
 	private String fName;
@@ -17,6 +19,23 @@ public class Player
 		this.jNumb = jNumb;
 	}
 	
+	public void enterPlayer(){
+	Scanner fName = new Scanner(System.in);	
+	System.out.println("Please enter a first name: ");
+	String firstName = fName.nextLine();
+	
+	Scanner lName = new Scanner(System.in);	
+	System.out.println("Please enter a last name: ");
+	String lastName = lName.nextLine();
+	
+	Scanner jNumb = new Scanner(System.in);	
+	System.out.println("Please enter a jersey number: ");
+	int jerseyNumb = jNumb.nextInt();
+	}
+
+
+	
+
 	public String getList()
 	{
 		return (jNumb + ") " + fName + " " + lName);
