@@ -1,10 +1,12 @@
 #include"Player.h"
-#include"Player.cpp"
 #include<iostream>
 #include<stdlib.h>
 #include<string>
 
 int main(){
+
+	Player * roster = new Player[11];
+	int playerNum = 0;
 	
 	bool keepGoing = true;
 	while (keepGoing == true) {
@@ -20,16 +22,16 @@ int main(){
 		std::cin >> choice;
 
 		if (choice == "1"){
-			Player * noobPlayer;
-			noobPlayer = new Player();
-			noobPlayer->enterPlayer();
-			delete noobPlayer;
+			roster[playerNum].enterPlayer();
+			playerNum++;
 		
 		}else if (choice == "2"){
+			
 			std::cout << "***IUPUI Football Roster***" << std::endl;
-			std::cout << getJerseyNumber() << ") ";
-			std::cout << getFirstName() << " ";
-			std::cout << getLastName();
+			for (int j=0; j < playerNum; j++) {
+				roster[j].printPlayers();
+			}	
+			std::cout << "***************************" << std::endl;
 			
 		}else if (choice == "3"){
 			keepGoing = false;
@@ -39,6 +41,7 @@ int main(){
 			main(); 	
 		}
 	}
-	
+	delete[] roster;
 	return 0;
 }
+

@@ -1,5 +1,5 @@
-#include<iostream>
 #include"Player.h"
+#include<iostream>
 
 // default constructor
 Player::Player(){
@@ -7,12 +7,12 @@ Player::Player(){
 	// reference current object
 	this->firstName = "0";
 	this->lastName = "0";
-	this->jerseyNumber = "0";
+	this->jerseyNumber = 0;
 
 }
 
 // constructor
-Player::Player(std::string fName, std::string lName, std::string jNumb){
+Player::Player(std::string fName, std::string lName, int jNumb){
 
 	this->firstName = fName;
 	this->lastName = lName;
@@ -28,24 +28,16 @@ Player::~Player(){
 void Player::enterPlayer(){
 
 	std::cout << "Please enter a first name: ";
-	std::string fName;
-	std::cin >> fName;
-	this->firstName = fName;
+	std::cin >> this->firstName;
 	std::cout << "Please enter a last name: ";
-	std::string lName;
-	std::cin >> lName;
-	this->lastName = lName;
+	std::cin >> this->lastName;
 	std::cout << "Please enter a jersey number: ";
-	std::string jNumb;
-	std::cin >> jNumb;
-	this->jerseyNumber = jNumb;
+	std::cin >> this->jerseyNumber;
 }
 
 void Player::printPlayers(){
 	
-	std::cout << "***IUPUI Football Roster***" << std::endl;
-	std::cout << jNumb << ") ";
-	std::cout << fName << " ";
-	std::cout << lName;
+	//std::cout << "***IUPUI Football Roster***" << std::endl;
+	std::cout << jerseyNumber << ") " << firstName << " " << lastName << std::endl;
 }
 
